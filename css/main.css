@@ -1,0 +1,146 @@
+html{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+/*************************************/
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #111;
+}
+.container{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .ring{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: -60px;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-top: 8px solid #24ecff;
+  animation: animate 4s linear infinite;
+}
+@keyframes animate {
+  0%{
+    transform: rotate(0deg);
+  }100%{
+    transform: rotate(360deg);
+  }
+}
+.container .ring::before{
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #24ecff;
+  top: 24px;
+  right: 24px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #24ecff33,
+              0 0 0 15px #24ecff22,
+              0 0 0 30px #24ecff11,
+              0 0 40px #24ecff,
+              0 0 60px #24ecff;
+
+}
+.container .ring:nth-child(2){
+  animation: animate1 4s linear infinite;
+  animation-delay: -2s;
+  border-top: 8px solid transparent;
+  border-left: 8px solid #93ff2d;
+}
+.container .ring:nth-child(2)::before{
+  content: "";
+  position: absolute;
+  top: initial;
+  width: 30px;
+  height: 30px;
+  background-color: #93ff2d;
+  bottom: 24px;
+  left: 24px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #93ff2d33,
+              0 0 0 15px #93ff2d22,
+              0 0 0 30px #93ff2d11,
+              0 0 40px #93ff2d,
+              0 0 60px #93ff2d;
+
+}
+
+
+@keyframes animate1 {
+  0%{
+    transform: rotate(360deg);
+  }100%{
+    transform: rotate(0deg);
+  }
+}
+
+.container .ring:nth-child(3){
+  animation: animate1 4s linear infinite;
+  animation-delay: -4s;
+  position: absolute;
+  top: -133.32px;
+  border-top: 8px solid transparent;
+  border-left: 8px solid #e41cf8;
+}
+.container .ring:nth-child(3)::before{
+  content: "";
+  position: absolute;
+  top: initial;
+  width: 30px;
+  height: 30px;
+  background-color: #e41cf8;
+  bottom: 24px;
+  left: 24px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #e41cf833,
+              0 0 0 15px #e41cf822,
+              0 0 0 30px #e41cf811,
+              0 0 40px #e41cf8,
+              0 0 60px #e41cf8;
+
+}
+
+.container p{
+  position: absolute;
+  color: #fff;
+  font-size: 2rem;
+  bottom: -160px;
+  letter-spacing: 0.1em;
+  text-transform:capitalize;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
